@@ -93,16 +93,28 @@ namespace stdgui
 		}
 	};
 
+	template<typename T>
+	inline rect<T> make_rect(T x1, T y1, T x2, T y2)
+	{
+		return rect(x1, y1, x2, y2);
+	}
+
+	template<typename T>
+	inline rect<T> make_rect(const point<T>& pt1, const point<T>& pt2)
+	{
+		return rect(pt1, pt2);
+	}
+
 	// Creates a rect with a position and a size instead of 2 positions
 	template<typename T>
-	inline rect<T> rect_size(T x, T y, T width, T height)
+	inline rect<T> make_rect_size(T x, T y, T width, T height)
 	{
 		return rect(x, y, x + width, y + height);
 	}
 
 	// Creates a rect with a position and a size instead of 2 positions
 	template<typename T>
-	inline rect<T> rect_size(coord<T>& pos, size<T>& size)
+	inline rect<T> make_rect_size(coord<T>& pos, size<T>& size)
 	{
 		return rect(pos.x, pos.y, pos.x + size.x, pos.y + size.y);
 	}

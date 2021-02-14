@@ -68,6 +68,24 @@ namespace stdgui
 	template<typename T>
 	using size = point<T>;
 
+	template<typename T>
+	inline point<T> make_point(T x, T y)
+	{
+		return point<T>(x, y);
+	}
+
+	template<typename T>
+	inline coord<T> make_coord(T x, T y)
+	{
+		return coord<T>(x, y);
+	}
+
+	template<typename T>
+	inline size<T> make_size(T x, T y)
+	{
+		return size<T>(x, y);
+	}
+
 	// Translates the position
 	// NOTES:
 	//	- Moves by amount, does not set position

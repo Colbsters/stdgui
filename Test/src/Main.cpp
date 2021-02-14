@@ -10,7 +10,7 @@ using namespace stdgui::operators;
 
 int main()
 {
-	stdgui::rect<int> rc(std::move(stdgui::rect_size(100, 100, 400, 300)));
+	stdgui::rect<int> rc(std::move(stdgui::make_rect_size(100, 100, 400, 300)));
 	stdgui::point<int> pt(300, 250);
 	std::cout << stdgui::point_in_rect(pt, rc) << '\n';
 	std::cout << "pt=" << pt << '\n';
