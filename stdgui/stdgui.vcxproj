@@ -179,6 +179,11 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\stdgui\point.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="include\stdgui\rect.h" />
     <ClInclude Include="src\stdgui\pch.h" />
     <ClInclude Include="include\stdgui\stdgui_core.h" />
   </ItemGroup>
