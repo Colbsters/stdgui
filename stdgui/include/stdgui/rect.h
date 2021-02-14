@@ -12,6 +12,8 @@ namespace stdgui
 	template<typename T>
 	struct rect
 	{
+		using type = T;
+
 		T left, top, right, bottom;
 
 		rect()

@@ -10,6 +10,8 @@ namespace stdgui
 	template<typename T>
 	struct point
 	{
+		using type = T;
+
 		T x, y;
 
 		point()
