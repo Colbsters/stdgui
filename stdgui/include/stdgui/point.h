@@ -94,7 +94,7 @@ namespace stdgui
 	template<typename T>
 	inline point<T> translate(const point<T>& pt, const point<T>& trans)
 	{
-		return point(pt.x + trans.x, pt.y + trans.y);
+		return point<T>(pt.x + trans.x, pt.y + trans.y);
 	}
 
 	namespace operators
