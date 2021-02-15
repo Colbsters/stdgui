@@ -14,7 +14,7 @@ namespace stdgui
 	{
 		enum event_code
 		{
-			null,
+			null = 0,
 			create,
 			destroy,
 			paint,
@@ -25,6 +25,7 @@ namespace stdgui
 			mouse_move,
 			mouse_button
 		};
+		event_code code;
 
 		void* params;
 	};
