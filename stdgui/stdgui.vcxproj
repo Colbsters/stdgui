@@ -184,11 +184,16 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="include\stdgui\rect.h" />
+    <ClInclude Include="include\stdgui\window.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="src\stdgui\pch.h" />
     <ClInclude Include="include\stdgui\stdgui_core.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="include\stdgui\stdgui_core.cpp" />
+    <ClCompile Include="src\stdgui\window.cpp" />
     <ClCompile Include="src\stdgui\dllmain.cpp" />
     <ClCompile Include="src\stdgui\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
