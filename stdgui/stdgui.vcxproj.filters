@@ -41,9 +41,6 @@
     <ClCompile Include="src\stdgui\dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="include\stdgui\stdgui_core.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\stdgui\window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

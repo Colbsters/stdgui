@@ -193,7 +193,6 @@
     <ClInclude Include="src\stdgui\win32\win32_window.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="include\stdgui\stdgui_core.cpp" />
     <ClCompile Include="src\stdgui\win32\win32_window.cpp" />
     <ClCompile Include="src\stdgui\window.cpp" />
     <ClCompile Include="src\stdgui\dllmain.cpp" />

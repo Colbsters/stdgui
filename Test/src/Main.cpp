@@ -1,12 +1,17 @@
-// Just to varify that things will compile
-#include <stdgui/stdgui_core.h>
-
-#include <stdgui/window.h>
 
 #include <iostream>
 #include <memory>
+#include <thread>
+#include <chrono>
 
+#include <stdgui/rect.h>
+#include <stdgui/point.h>
+#include <stdgui/window.h>
+
+// Use literals and operators
 using namespace stdgui::operators;
+using namespace std::chrono_literals;
+
 
 void EventHandler(const stdgui::window_event& event)
 {
@@ -39,7 +44,7 @@ int main()
 	wndprops.paint_handler = EventHandler;
 	auto window = stdgui::make_window(wndprops);
 
-	while (window->update());
+	while (window->update()) std::this_thread::sleep_for(10ms);
 
 	return 0;
 }
