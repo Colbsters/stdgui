@@ -30,6 +30,9 @@
     <ClInclude Include="include\stdgui\window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\stdgui\win32\win32_window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\stdgui\pch.cpp">
@@ -42,6 +45,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\stdgui\window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdgui\win32\win32_window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
