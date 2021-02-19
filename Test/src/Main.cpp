@@ -7,6 +7,7 @@
 #include <stdgui/rect.h>
 #include <stdgui/point.h>
 #include <stdgui/window.h>
+#include <stdgui/graphics.h>
 
 // Use literals and operators
 using namespace stdgui::operators;
@@ -15,11 +16,18 @@ using namespace std::chrono_literals;
 
 void EventHandler(const stdgui::window_event& event)
 {
+	static std::shared_ptr<stdgui::graphics> grph;
+
 	switch (event.code)
 	{
 	case stdgui::window_event::create:
+	{
+		stdgui::graphics_props grphprops;
+		grphprops.wnd = event.wnd;
+		grph = stdgui::make_graphics(grphprops);
 		std::cout << "Window created\n";
 		break;
+	}
 	case stdgui::window_event::destroy:
 		std::cout << "Window destroyed\n";
 		break;

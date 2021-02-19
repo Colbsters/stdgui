@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -179,6 +179,10 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\stdgui\graphics.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="include\stdgui\point.h">
       <SubType>
       </SubType>
@@ -193,6 +197,7 @@
     <ClInclude Include="src\stdgui\win32\win32_window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\stdgui\graphics.cpp" />
     <ClCompile Include="src\stdgui\win32\win32_window.cpp" />
     <ClCompile Include="src\stdgui\window.cpp" />
     <ClCompile Include="src\stdgui\dllmain.cpp" />
