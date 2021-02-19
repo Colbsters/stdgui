@@ -16,10 +16,11 @@ namespace stdgui
         {
         }
 
-        bool win32_window::create(const window_props& props)
+        bool win32_window::create(const window_props& props, std::shared_ptr<window>& this_window)
         {
             m_eventHandlers = props.event_handlers;
             m_paintHandler = props.paint_handler;
+            m_thisWnd = this_window;
 
             if (!m_clsAtom)
             {
@@ -163,7 +164,7 @@ namespace stdgui
 
             if (window)
             {
-                window_event event = { window_event::null, *window, nullptr };
+                window_event event = { window_event::null, window->m_thisWnd, nullptr };
                 void* eventParams = nullptr;
 
                 // Setup messages for dispatching

@@ -19,7 +19,7 @@ namespace stdgui
 			win32_window();
 			~win32_window();
 
-			virtual bool create(const window_props& props) override;
+			virtual bool create(const window_props& props, std::shared_ptr<window>& this_window) override;
 			virtual bool destroy() override;
 
 			virtual bool update() override;
@@ -37,6 +37,7 @@ namespace stdgui
 		private:
 			static LRESULT WndProc(HWND hWnd, UINT msg, WPARAM wparam, LPARAM lparam);
 
+			std::shared_ptr<window> m_thisWnd;
 			std::vector<window_event_handler> m_eventHandlers;
 			window_event_handler m_paintHandler;
 

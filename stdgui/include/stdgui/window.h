@@ -29,7 +29,7 @@ namespace stdgui
 		};
 		event_code code;
 
-		window& wnd;
+		std::shared_ptr<window> wnd;
 		const void* params;
 	};
 
@@ -76,8 +76,9 @@ namespace stdgui
 	public:
 		window() {}
 		virtual ~window() {}
-
-		virtual bool create(const window_props& props) = 0;
+		
+		// this_wnd takes in aa shared_ptr to itself
+		virtual bool create(const window_props& props, std::shared_ptr<window>& this_window) = 0;
 		virtual bool destroy() = 0;
 
 		virtual bool update() = 0;
@@ -95,13 +96,7 @@ namespace stdgui
 		virtual void set_paint_handler(const window_event_handler& paint_handler) = 0;
 	};
 
-	STDGUI_API std::shared_ptr<window> make_window_shared(const window_props& props);
-	STDGUI_API std::unique_ptr<window> make_window_unique(const window_props& props);
-
-	inline std::shared_ptr<window> make_window(const window_props& props)
-	{
-		return make_window_shared(props);
-	}
+	STDGUI_API std::shared_ptr<window> make_window(const window_props& props);
 }
 
 #endif // STDGUI_WINDOW_H
