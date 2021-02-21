@@ -77,8 +77,7 @@ namespace stdgui
 		window() {}
 		virtual ~window() {}
 		
-		// this_wnd takes in aa shared_ptr to itself
-		virtual bool create(const window_props& props, std::shared_ptr<window>& this_window) = 0;
+		virtual bool create(const window_props& props) = 0;
 		virtual bool destroy() = 0;
 
 		virtual bool update() = 0;

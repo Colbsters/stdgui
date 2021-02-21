@@ -13,7 +13,7 @@ namespace stdgui
 #else // ^^^ Windows ||| Unsupported platform vvv
         return std::shared_ptr<window>(nullptr);
 #endif // ^^^ Unsupported platform
-        wnd->create(props, wnd);
+        wnd->create(props);
         return wnd;
     }
 }
