@@ -31,7 +31,7 @@ namespace stdgui
 			virtual rect<int> get_window_rect() override;
 			virtual rect<int> get_client_rect() override;
 			virtual window_api get_window_api() override;
-			virtual const void* get_native_handle() override;
+			virtual void* get_native_handle() override;
 			
 			virtual void push_event_handler(const window_event_handler& event_handler) override;
 			virtual void set_paint_handler(const window_event_handler& paint_handler) override;

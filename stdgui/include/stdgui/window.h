@@ -89,7 +89,7 @@ namespace stdgui
 		virtual rect<int> get_client_rect() = 0;
 		virtual window_api get_window_api() = 0;
 		// Returns a pointer to the handle type (ex: HWND*, not HWND) 
-		virtual const void* get_native_handle() = 0;
+		virtual void* get_native_handle() = 0;
 
 		virtual void push_event_handler(const window_event_handler& event_handler) = 0;
 		virtual void set_paint_handler(const window_event_handler& paint_handler) = 0;

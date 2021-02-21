@@ -129,7 +129,7 @@ namespace stdgui
             return window_api::win32;
         }
 
-        const void* win32_window::get_native_handle()
+        void* win32_window::get_native_handle()
         {
             return &m_hWnd;
         }
