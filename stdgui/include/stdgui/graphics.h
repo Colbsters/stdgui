@@ -35,7 +35,7 @@ namespace stdgui
 		graphics() {}
 		virtual ~graphics() {}
 
-		virtual bool create(graphics_props props) = 0;
+		virtual bool create(const graphics_props& props) = 0;
 		virtual bool destroy() = 0;
 
 		// This function must be called before any rendering command is made
@@ -48,6 +48,11 @@ namespace stdgui
 		// NOTE: begin_draw() must be called before a call to this function.
 		//	This function will return false if it wasn't
 		virtual bool end_draw() = 0;
+
+		// Gets the api for this graphics instance
+		virtual graphics_api api() = 0;
+		// For internal use, the format of the returned data is determined by the implementation
+		virtual std::unique_ptr<void> data() = 0;
 	};
 
 	STDGUI_API std::shared_ptr<graphics> make_graphics(graphics_props props);
