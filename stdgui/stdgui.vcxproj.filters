@@ -36,6 +36,9 @@
     <ClInclude Include="include\stdgui\graphics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\stdgui\d2d1\d2d1_graphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\stdgui\pch.cpp">
@@ -51,6 +54,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\stdgui\graphics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdgui\d2d1\d2d1_graphics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

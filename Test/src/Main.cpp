@@ -38,8 +38,15 @@ void EventHandler(const stdgui::window_event& event)
 		std::cout << "Window resizing\nnew position:\n   " << *((const stdgui::rect<int>*)event.params) << '\n';
 		break;
 	case stdgui::window_event::paint:
+	{
+		grph->begin_draw();
+
+
+
+		grph->end_draw();
 		std::cout << "Window painted\n";
 		break;
+	}
 	default:
 		break;
 	}
